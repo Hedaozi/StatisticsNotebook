@@ -1,0 +1,39 @@
+* {
+  font-family: Centaur, 宋体;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: bold;
+}
+p.caption {
+  color: #777;
+  margin-top: 10px;
+}
+p.author {
+  text-indent:0em;
+}
+p.date {
+  text-indent:0em;
+}
+b, a, li, input {
+}
+ol{
+}
+p code {
+  white-space: inherit;
+}
+pre {
+  word-break: normal;
+  word-wrap: normal;
+}
+pre code * {
+  white-space: inherit;
+}
+
+code {
+  font-family: Courier, 宋体;
+}
+
+code * {
+  font-family: Courier, 宋体;
+}

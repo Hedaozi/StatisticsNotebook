@@ -1,0 +1,7 @@
+bookdown::bs4_book:
+  css: style.css
+  theme:
+    primary: "#A20025"
+    
+bookdown::gitbook:
+  css: style.css

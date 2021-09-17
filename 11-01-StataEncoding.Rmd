@@ -1,0 +1,80 @@
+# (PART) Stata基础 {#StataFoundation}
+
+# 文件编码与转码 {#StataEncoding}
+
+## 文件编码 {#StataFileEncoding}
+
+Stata 14及之后版本默认使用的编码为UTF-8，而Stata 13及之前版本的中文数据使用的编码多为GB2312、GBK或GB18030。
+
+因此若要在Stata 14及之后的软件中，打开Stata 13及之前的数据，需要先做转码，才能正常使用。如果不转码，则可能出现乱码，使变量标签、值标签和字符型变量失去可读性。
+
+## 文件转码 {#StataTransEncoding .panelset}
+
+### Stata官方命令 {-}
+
+<br>
+
+Stata内置了`unicode`命令组来完成转码操作，其中`unicode translate`适用于将其他编码文件转为UTF-8编码文件。
+
+在执行`unicode translate`命令前，需要清空内存，并切换工作目录到文件存放目录：
+
+```stata
+cd "Your\Path\To\Files"
+clear
+```
+
+接着，需要设定源文件编码。一般而言，对于中文数据，设置为GB18030即可（GB18030兼容GBK，GBK兼容GB2312）：
+
+```stata
+unicode encoding set "gb18030"
+```
+
+设置完后，可以使用`unicode analyze`命令，预览结果。此时Stata不会真正转码，而是会分析在当前设置下，文件是否能成功转码。以dta数据为例：
+
+```stata
+unicode analyze *.dta
+```
+
+如果结果表明可以成功转码，则执行：
+
+```stata
+unicode translate *.dta, transutf8
+```
+
+如果有少数几个部分（例如几个标签）包含GB18030无法解码的字符，那么可以追加`invalid`选项：
+
+```stata
+unicode translate *.dta, transutf8 invalid
+```
+
+关于更多设置，可以使用`help unicode`获取帮助。
+
+### 第三方命令`QTransUni` {-}
+
+<br>
+
+笔者将Stata官方的几个命令整合成单个命令`QTransUni`，以简化操作。在Stata中，该命令的安装方式为：
+
+```stata
+net install http://hedaozi.com/resource/program/Stata/16/QTransUni/
+```
+
+`QTransUni`共有5个选项：
+
+- `path(string)`：必选，文件存放的目录。
+- `filespec(string)`：必选，文件的类别。
+- `baseEncoding(string)`：可选，源文件的编码，默认值为GB18030。
+- `clear`：可选，用于清空内存。如果需要添加该参数，最好先保存内存数据。
+- `invalid`：可选，当有少量字符无法转码时可以添加该选项。
+
+因此，如果要对某个文件夹内的dta数据转码，只需要：
+
+```stata
+QTransUni, path(Your/Path/To/Files) filespec(*.dta)
+```
+
+如果有少量字符无法转码，可以：
+
+```stata
+QTransUni, path(Your/Path/To/Files) filespec(*.dta) invalid
+```
