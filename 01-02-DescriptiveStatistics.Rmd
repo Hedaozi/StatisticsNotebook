@@ -1,3 +1,8 @@
+```{r include=FALSE}
+xaringanExtra::use_panelset()
+xaringanExtra::style_panelset_tabs(font_family = "inherit")
+```
+
 # 描述统计 {#DescriptiveStatistics}
 
 ## 数据的分布 {#DataDistribution .panelset}

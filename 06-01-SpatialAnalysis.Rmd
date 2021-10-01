@@ -1,0 +1,18 @@
+# (PART) 第六编 空间分析 {-}
+
+# 探索性空间分析 {#ExploreSpatialAnalysis}
+
+待补充。
+
+# 空间自相关 {#SpatialAutocorrelation}
+
+待补充。
+
+# 空间回归 {#SpatialRegression}
+
+待补充。
+
+# 地理加权回归 {#GeographicallyWeightedRegression}
+
+待补充。
+

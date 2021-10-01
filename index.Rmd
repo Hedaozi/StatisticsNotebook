@@ -1,5 +1,5 @@
 --- 
-title: "统计学笔记"
+title: "数据分析笔记"
 author: "何凌锋"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
@@ -8,6 +8,31 @@ biblio-style: apalike
 link-citations: yes
 ---
 
-# 说明 {-}
+# 说明 {#About .unnumbered}
 
-Omitted.
+## 关于本书 {#AboutThisBook .unnumbered}
+
+- 性质：个人数据分析笔记
+- 内容：
+  - 初级统计编：统计学基本概念，T检验，卡方检验，方差分析，简单线性回归。
+  - 中级统计编：多元回归分析。
+  - 高级统计编。
+  - 结构方程模型编：潜变量分析，结构方程模型。
+  - 多状态模型编：马尔可夫链，多状态模型原理及应用。
+  - 空间分析编：空间分析基本概念，探索性空间分析，可视化，空间统计。
+  - 网络分析编：网络分析基本概念，中心性分析，凝聚子群分析。
+  - 文本分析编：中文分词，词频分析。
+  - 机器学习编：决策树模型。
+  - 统计图形编：R语言统计图形绘制。
+  - 统计报表编：输出Stata和R统计报表到文件。
+  - 可重复报告编：Markdown、Markstat、RMarkdown、Bookdown。
+  - 数据处理编：文件编码，数据清洗，数据管理。
+  - 数据获取编：爬虫。
+- 更新时间：随缘。
+
+## 关于作者 {#AboutAuthor .unnumbered}
+
+- 作者：何凌锋
+- 单位：西安交通大学，实证社会科学研究所
+- Github主页：https://github.com/Hedaozi
+- Gitee主页：https://gitee.com/ekolof

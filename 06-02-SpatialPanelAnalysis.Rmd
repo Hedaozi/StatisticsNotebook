@@ -1,0 +1,77 @@
+```{r include=FALSE}
+library(sf)
+library(spdep)
+library(tidyverse)
+
+hunan <- read_sf("demo/Hunan_GDP_Pop.shp") %>%
+  as_Spatial()
+
+hunan_reord <- hunan[order(hunan$code),]
+hunan_listw <-nb2listw(graph2nb(soi.graph(tri2nb(coordinates(hunan_reord)), coordinates(hunan_reord))))
+
+hunan_data <- hunan@data %>%
+  reshape2::melt() %>%
+  mutate(year = as.Date(str_extract(variable, "\\d+"), format = "%Y"),
+         index = str_extract(variable, ".+(?=_)")) %>%
+  select(-variable) %>%
+  reshape2::dcast(formula = code + year + name ~ index, value.var = "value")
+```
+
+
+# 空间面板分析 {#SpatialPanelAnalysis}
+
+```{r}
+library(splm)
+library(plm)
+```
+
+
+```{r}
+fm <- gdp ~ pop
+
+fe <- plm(fm, data = hunan_data, effects = "individual",
+          model = "within", index = c("code", "year"))
+
+fe_lag <- spml(fm, data = hunan_data, listw = hunan_listw, 
+               model = "within", effect = "individual", lag = T, 
+               spatial.error = "none", index = c("code", "year"))
+
+fe_err <- update(fe_lag, model = "random")
+```
+
+```{r echo=FALSE, results='asis'}
+library(stargazer)
+stargazer(fe, type = "html")
+```
+
+
+# (PART) 第七编 网络分析 {-}
+
+# 网络数据 {#NetworkData}
+
+待补充。
+
+# 节点特征 {#NodesPattern}
+
+待补充。
+
+# 中心性分析 {#Centrality}
+
+待补充。
+
+# 凝聚子群分析 {#Subgroup}
+
+待补充。
+
+# (PART) 第八编 文本分析 {-}
+
+# 分词 {#WordSegmentation}
+
+# (PART) 第九编 机器学习 {-}
+
+# (PART) 第十编 统计图形 {-}
+
+# (PART) 第十一编 统计报表 {-}
+
+# (PART) 第十二编 可重复报告 {-}
+

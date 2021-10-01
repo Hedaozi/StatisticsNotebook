@@ -1,4 +1,4 @@
-# (PART) 初级统计 {-}
+# (PART) 第一编 初级统计 {-}
 
 # 基本统计概念 {#BasicConcept}
 
@@ -8,12 +8,11 @@
 
 中心极限定律则描述：对独立重复试验，样本均值**依分布**收敛于一正态分布，该正态分布的期望即为总体期望，方差为总体方差除以样本量。由此，在样本量趋向无穷大的过程中，**均值的标准差**（即**抽样误差**）趋向于0。进而，有如下直观描述：当样本量很大的时候，样本均值十分接近总体均值，因为偏差的程度非常小。
 
-以下是一个关于中心极限定律的模拟。若要获得更好的交互体验，请点击[此处](https://ekolof.shinyapps.io/cit_simulation)。
+以下是一个关于中心极限定律的模拟。若要获得更好的交互体验，请点击[此处](http://shiny.hedaozi.com/clt/)。
 
 ```{r echo=FALSE}
-knitr::include_app("https://hedaozi.shinyapps.io/CLTSimulation/", height = 900)
+knitr::include_app("http://shiny.hedaozi.com/clt-mini/", height = 900)
 ```
-
 
 ## 总体分布，样本分布，抽样分布 {#DistributionOfPopulationSampleSampling}
 

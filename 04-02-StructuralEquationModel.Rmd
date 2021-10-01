@@ -1,0 +1,23 @@
+# 结构方程模型 {#StructuralEquationModel .panelset}
+
+## Stata {-}
+
+主成分分析
+
+```stata
+factor w2b06*, pcf
+```
+
+多层线性回归模型
+
+```stata
+help mixed
+```
+
+结构方程模型
+
+```stata
+sem(SB->w2a200*)
+estat gof, stats(all)
+```
+
