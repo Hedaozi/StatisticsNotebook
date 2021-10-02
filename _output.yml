@@ -1,5 +1,6 @@
 bookdown::bs4_book:
   css: html/style.css
+  repo: https://github.com/hedaozi/StatisticsNotebook
   theme:
     primary: "#A20025"
     
