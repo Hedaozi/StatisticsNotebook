@@ -1,4 +1,4 @@
-# (PART) 第六编 空间分析 {-}
+# (PART) 空间分析 {-}
 
 # 探索性空间分析 {#ExploreSpatialAnalysis}
 

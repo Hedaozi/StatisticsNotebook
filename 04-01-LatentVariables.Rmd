@@ -1,8 +1,8 @@
-# (PART) 第二编 中级统计 {-}
+# (PART) 中级统计 {-}
 
-# (PART) 第三编 高级统计 {-}
+# (PART) 高级统计 {-}
 
-# (PART) 第四编 结构方程模型 {-}
+# (PART) 结构方程模型 {-}
 
 # 潜变量分析 {#LatentVariablesAnalysis}
 

@@ -1,0 +1,12 @@
+# (APPENDIX) 附录 {-}
+
+# 术语对照表 {#Terms}
+
+- 马尔可夫性质 (Markov Property)
+- 马尔可夫过程 (Markov Process)
+- 马尔可夫链 (Markov Chain)
+- 转移概率 (Transition Probability)
+- 转移矩阵 (Transition Matrix)
+- 转移图 (Transition Graph)
+
+# 参考文献 {#Reference}

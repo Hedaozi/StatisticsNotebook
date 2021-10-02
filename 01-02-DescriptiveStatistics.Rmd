@@ -17,7 +17,7 @@ xaringanExtra::style_panelset_tabs(font_family = "inherit")
 
 在Stata中，可以用`summarize`命令加上`detail`选项查看这些统计量（除去众数）。下面给出`summarize`的结果解释：
 
-```{r}
+```{r echo=FALSE}
 knitr::include_graphics("images/description/Stata.png")
 ```
 

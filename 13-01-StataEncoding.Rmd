@@ -3,7 +3,7 @@ xaringanExtra::use_panelset()
 xaringanExtra::style_panelset_tabs(font_family = "inherit")
 ```
 
-# (PART) 第十三编 数据处理 {-}
+# (PART) 数据处理 {-}
 
 # 文件编码与转码 {#StataEncoding}
 

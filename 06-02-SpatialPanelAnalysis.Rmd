@@ -45,7 +45,7 @@ stargazer(fe, type = "html")
 ```
 
 
-# (PART) 第七编 网络分析 {-}
+# (PART) 网络分析 {-}
 
 # 网络数据 {#NetworkData}
 
@@ -63,15 +63,15 @@ stargazer(fe, type = "html")
 
 待补充。
 
-# (PART) 第八编 文本分析 {-}
+# (PART) 文本分析 {-}
 
 # 分词 {#WordSegmentation}
 
-# (PART) 第九编 机器学习 {-}
+# (PART) 机器学习 {-}
 
-# (PART) 第十编 统计图形 {-}
+# (PART) 统计图形 {-}
 
-# (PART) 第十一编 统计报表 {-}
+# (PART) 统计报表 {-}
 
-# (PART) 第十二编 可重复报告 {-}
+# (PART) 可重复报告 {-}
 
