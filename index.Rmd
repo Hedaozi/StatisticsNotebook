@@ -12,7 +12,7 @@ github-repo: hedaozi/StatisticsNotebook
 
 # 说明 {#About .unnumbered}
 
-[![Buy from amazon](cover.png){.cover width="250"}]()
+<!--[![Buy from amazon](cover.png){.cover width="250"}]()-->
 
 ## 关于本书 {#AboutThisBook .unnumbered}
 
